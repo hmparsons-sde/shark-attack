@@ -1,5 +1,7 @@
-# React Template
+## Shark Attack
 
-Use this template to get up and running quickly on projects. 
-- For setting up this template, [follow these instructions](https://github.com/nss-nightclass-projects/Night-Class-Resources/blob/master/book-4-react/chapters/react-setup.md).
-- [Steps to deploy](https://github.com/nss-nightclass-projects/REACT-Deployment-Netlify)
+The focus of this assignment is state and props in React.
+
+### Link to exercise instructions:
+
+https://github.com/hmparsons-sde/exercise-vault/blob/master/REACT_shark_attack.md
