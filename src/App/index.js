@@ -1,36 +1,22 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
+import Graveyard from '../components/Graveyard';
+import SharkTank from '../components/SharkTank';
+import { dearlyBeloved, livingStudents } from '../helpers/data/studentData';
 import './App.scss';
 
 function App() {
-  const [domWriting, setDomWriting] = useState('Nothing Here!');
-
-  const handleClick = (e) => {
-    console.warn(`You clicked ${e.target.id}`);
-    setDomWriting(`You clicked ${e.target.id}! Check the Console!`);
-  };
-
+  const [liveStudents, setLiveStudents] = useState([]);
+  const [deadStudents, setDeadStudents] = useState([]);
+  useEffect(() => {
+    setLiveStudents(livingStudents());
+    setDeadStudents(dearlyBeloved());
+  }, []);
   return (
     <div className='App'>
-      <h2>INSIDE APP COMPONENT</h2>
-      <div>
-        <button
-          id='this-button'
-          className='btn btn-info'
-          onClick={handleClick}
-        >
-          I am THIS button
-        </button>
-      </div>
-      <div>
-        <button
-          id='that-button'
-          className='btn btn-primary mt-3'
-          onClick={handleClick}
-        >
-          I am THAT button
-        </button>
-      </div>
-      <h3>{domWriting}</h3>
+      <header><h1>Shark Tank</h1></header>
+      <SharkTank liveStudents={liveStudents} setLiveStudents={setLiveStudents} setDeadStudents={setDeadStudents}></SharkTank>
+      <h1>Dearly Departed</h1>
+      <Graveyard deadStudents={deadStudents}></Graveyard>
     </div>
   );
 }
