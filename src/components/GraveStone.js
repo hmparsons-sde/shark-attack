@@ -4,15 +4,15 @@ import {
   Card, CardBody, CardTitle
 } from 'reactstrap';
 
-const GraveStone = ({ firstName, lastName }) => {
+const GraveStone = ({ firstName, lastName }) => (
   <div>
     <Card className='gravestone'>
       <CardBody>
       <CardTitle>{firstName} {lastName}</CardTitle>
       </CardBody>
     </Card>
-  </div>;
-};
+  </div>
+);
 
 GraveStone.propTypes = {
   firstName: PropTypes.string.isRequired,
