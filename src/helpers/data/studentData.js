@@ -139,16 +139,20 @@ const students = [
   },
 ];
 
-const livingStudents = () => students.filter((student) => student.isDead === false);
-
-const dearlyBeloved = () => students.filter((student) => student.isDead === true);
-
-const followTheLight = (studentId) => {
-  students.forEach((response) => {
-    if (response.id === studentId) {
-      response.isDead = true;
-    }
-  });
+const livingStudents = () => {
+  const livingStudentsArray = students.filter((student) => student.isDead === false);
+  return livingStudentsArray;
+};
+const dearlyBeloved = () => {
+  const deadStudentsArray = students.filter((student) => student.isDead);
+  return deadStudentsArray;
+};
+const followTheLight = (array) => {
+  const studentsArray = array;
+  const randomAttack = Math.floor(Math.random() * studentsArray.length);
+  if (studentsArray[randomAttack].isDead === false) {
+    studentsArray[randomAttack].isDead = true;
+  }
 };
 
-export default { livingStudents, dearlyBeloved, followTheLight };
+export { livingStudents, dearlyBeloved, followTheLight };
