@@ -1,0 +1,12 @@
+@import '../styles/variables';
+
+Button {
+  position: fixed;
+  margin: 0px 50px 50px 30px;
+  padding: 10px 20px;
+  font-family: $primaryfont;
+}
+
+Button:hover {
+  background: linear-gradient(#fada, #fa1)
+}

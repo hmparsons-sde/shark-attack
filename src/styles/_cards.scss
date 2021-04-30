@@ -1,0 +1,14 @@
+.grave-container, .shark-tank {
+  display: flex;
+  flex-flow: row wrap;
+
+  .card {
+    width: 350px;
+    height: 100px;
+    margin: 5px;
+  }
+
+  .card-body {
+    flex: none;
+  }
+}
