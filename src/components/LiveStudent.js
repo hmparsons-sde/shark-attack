@@ -1,11 +1,13 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Card, CardTitle } from 'reactstrap';
+import { Card, CardBody, CardTitle } from 'reactstrap';
 
 const LiveStudent = ({ firstName, lastName }) => (
   <div>
     <Card className='student-card'>
-      <CardTitle>{firstName} {lastName}</CardTitle>
+      <CardBody>
+      <CardTitle tag="h4" className="mt-2 mb-2 text-muted">{firstName} {lastName}</CardTitle>
+      </CardBody>
     </Card>
   </div>
 );

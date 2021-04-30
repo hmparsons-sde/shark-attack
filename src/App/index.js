@@ -13,9 +13,9 @@ function App() {
   }, []);
   return (
     <div className='App'>
-      <header><h1>Shark Tank</h1></header>
+      <header><h1 className='mt-5'>Shark Tank</h1></header>
       <SharkTank liveStudents={liveStudents} setLiveStudents={setLiveStudents} setDeadStudents={setDeadStudents}></SharkTank>
-      <h1>Dearly Departed</h1>
+      <h1 className='mt-5'>Dearly Departed</h1>
       <Graveyard deadStudents={deadStudents}></Graveyard>
     </div>
   );

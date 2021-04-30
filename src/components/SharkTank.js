@@ -11,13 +11,15 @@ function SharkTank({ liveStudents, setLiveStudents, setDeadStudents }) {
     setDeadStudents(dearlyBeloved());
   };
   return (
-    <div className='shark-container'>
-      <Button color='danger' onClick={handleSharkAttack}>SHARK ATTACK</Button>
+    <div className='button-container'>
+      <Button className='m-3' color='danger' onClick={handleSharkAttack}>SHARK ATTACK</Button>
+      <div className='shark-tank'>
       {liveStudents.map((studentObject) => <LiveStudent
         key={studentObject.id}
         firstName={studentObject.firstName}
         lastName={studentObject.lastName}
       />)}
+      </div>
     </div>
   );
 }

@@ -8,7 +8,7 @@ const GraveStone = ({ firstName, lastName }) => (
   <div>
     <Card className='gravestone'>
       <CardBody>
-      <CardTitle>{firstName} {lastName}</CardTitle>
+      <CardTitle tag="h4" className="mt-2 mb-2 text-muted">{firstName} {lastName}</CardTitle>
       </CardBody>
     </Card>
   </div>
